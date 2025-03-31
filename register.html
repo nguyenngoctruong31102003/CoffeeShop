@@ -30,40 +30,29 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>My Coffee Shop</title>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 
-<body
-    style="background-image: url(https://raw.githubusercontent.com/CiurescuP/LogIn-Form/main/bg.jpg); background-repeat: no-repeat;">
+<body style="background-image: url(https://raw.githubusercontent.com/CiurescuP/LogIn-Form/main/bg.jpg); background-repeat: no-repeat;">
     <!-- =========================== -->
     <!-- Start Body -->
     <form>
-        <h3>Sign In</h3>
+        <h3>Sign Up</h3>
 
-        <label for="username">Tài Khoản</label>
-        <input type="text" placeholder="Your Phone" id="username">
+        <label for="username">Họ Tên <span>*</span></label>
+        <input type="text" placeholder="Your name....." id="name">
 
-        <label for="password">Mật Khẩu</label>
+        <label for="username">Tài Khoản <span>*</span></label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Mật Khẩu <span>*</span></label>
         <input type="password" placeholder="Password" id="password">
+        
 
-        <button>Đăng Nhập</button>
-        <p class="social-text">Bạn chưa có tài khoản? </p>
-
-        <div class="social-icons">
-            <a href="register.html"><button type="button" class="social-icon fb">
-                    <i class="fa-solid fa-phone"></i>
-                </button>
-            </a>
-            <button class="social-icon fb" onclick="loginWithFacebook()">
-                <i class="fa-brands fa-facebook"></i>
-            </button>
-            <button class="social-icon tw"><i class="fa-brands fa-google"></i></button>
-            <button class="social-icon in"><i class="fa-brands fa-apple"></i></button>
-
-        </div>
-        <div style="text-align: center; margin-top: 7px;">
-            <a href="index.html" style="text-decoration: none; font-size: 16px; color: white;">
-                ⬅ Quay lại trang chủ
+        <button>Đăng Ký Tài Khoản</button>
+        
+        <div style="text-align: center; margin-top: 10px;">
+            <a href="login.html" style="text-decoration: none; font-size: 16px; color: white;">
+                ⬅ Quay lại đăng nhập
             </a>
         </div>
     </form>
@@ -71,9 +60,6 @@
 
     <!-- JavaScrip Link -->
     <script src="Script/script.js"></script>
-    <script>
-        
-    </script>
 </body>
 
 </html>

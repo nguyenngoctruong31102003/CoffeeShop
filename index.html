@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="Images/icons/coffee-cup.png">
     <!-- link CSS -->
     <link rel="stylesheet" type="text/css" href="Css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -47,9 +47,11 @@
                     </rect>
                     <rect stroke-width="2" stroke="#282828" fill="#282828" rx="1" height="11" width="4" y="81" x="193">
                     </rect>
-                    <rect stroke-width="3" stroke="#282828" fill="#DFDFDF" rx="2.5" height="90" width="121" y="1.5" x="6.5">
+                    <rect stroke-width="3" stroke="#282828" fill="#DFDFDF" rx="2.5" height="90" width="121" y="1.5"
+                        x="6.5">
                     </rect>
-                    <rect stroke-width="2" stroke="#282828" fill="#DFDFDF" rx="2" height="4" width="6" y="84" x="1"></rect>
+                    <rect stroke-width="2" stroke="#282828" fill="#DFDFDF" rx="2" height="4" width="6" y="84" x="1">
+                    </rect>
                 </svg>
             </div>
             <div class="truckTires">
@@ -63,7 +65,7 @@
                 </svg>
             </div>
             <div class="road"></div>
-    
+
             <svg xml:space="preserve" viewBox="0 0 453.459 453.459" xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns="http://www.w3.org/2000/svg" id="Capa_1" version="1.1" fill="#000000" class="lampPost">
                 <path d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993
@@ -97,11 +99,15 @@
                 Giỏ hàng
             </a>
             <span class="xo">|</span>
-            <a href="Login.html" class="nav-btn active">
+            <a href="login.html" class="nav-btn active">
                 <i class="bx bx-user-circle"></i>
                 Đăng nhập/Đăng ký
             </a>
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <div id="user-info"></div>
+            <a >
+                <button onclick="logoutFromFacebook()"><i class='bx bx-log-out'></i></button>
+            </a>
+            <div class="bx bx-menu" id="menu-icon"></div>   
         </div>
     </header>
     <!-- End Header -->
@@ -169,7 +175,7 @@
         AOS.init({
             offset: 1,
         });
-        
+
     </script>
 </body>
 
