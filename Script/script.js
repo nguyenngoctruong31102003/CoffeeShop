@@ -38,22 +38,17 @@ window.fbAsyncInit = function () {
     xfbml: true,
     version: "v18.0",
   });
-
+  console.log("Facebook SDK Loaded Successfully");
   FB.AppEvents.logPageView();
 };
 
 (function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
-  let js = d.createElement(s);
+  js = d.createElement(s);
   js.id = id;
   js.src = "https://connect.facebook.net/en_US/sdk.js";
-  js.onload = function () {
-    console.log("Facebook SDK Loaded Successfully");
-  };
-  js.onerror = function () {
-    console.error("Facebook SDK Failed to Load");
-  };
-  let fjs = d.getElementsByTagName(s)[0];
   fjs.parentNode.insertBefore(js, fjs);
 })(document, "script", "facebook-jssdk");
 
