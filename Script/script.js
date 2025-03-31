@@ -32,6 +32,16 @@ window.fbAsyncInit = function () {
 
   FB.AppEvents.logPageView();
 };
+(function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
+
 // Log In
 function loginWithFacebook() {
   FB.login(
@@ -63,7 +73,6 @@ function logoutFromFacebook() {
     document.getElementById("user-info").innerHTML = ""; // Xóa thông tin hiển thị
   });
 }
-
 
 // Show password
 // const pwd = document.getElementById("Pwd");
