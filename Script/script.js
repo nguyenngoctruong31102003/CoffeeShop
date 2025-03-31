@@ -29,7 +29,7 @@ window.fbAsyncInit = function () {
     xfbml: true,
     version: "v18.0",
   });
-
+console.log(FB.version)
   FB.AppEvents.logPageView();
 };
   (function (d, s, id) {
