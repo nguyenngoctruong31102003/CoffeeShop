@@ -1,19 +1,10 @@
 let menu = document.querySelector("#menu-icon");
 let menuist = document.querySelector(".menu-list");
 
-document.addEventListener("DOMContentLoaded", function () {
-  let menu = document.querySelector("#menu-icon");
-  let menuist = document.querySelector(".menu-list");
-
-  if (menu && menuist) {
-    menu.onclick = () => {
-      menu.classList.toggle("bx-x");
-      menuist.classList.toggle("open");
-    };
-  } else {
-    console.error("Không tìm thấy phần tử menu hoặc menuist");
-  }
-});
+menu.onclick = () => {
+  menu.classList.toggle("bx-x");
+  menuist.classList.toggle("open");
+};
 
 // preloader
 window.addEventListener("load", () => {
@@ -38,19 +29,17 @@ window.fbAsyncInit = function () {
     xfbml: true,
     version: "v18.0",
   });
-  console.log("Facebook SDK Loaded Successfully");
+
   FB.AppEvents.logPageView();
 };
-
-(function (d, s, id) {
-  var js,
-    fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk.js";
-  fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
 // Log In
 function loginWithFacebook() {
@@ -83,6 +72,7 @@ function logoutFromFacebook() {
     document.getElementById("user-info").innerHTML = ""; // Xóa thông tin hiển thị
   });
 }
+
 
 // Show password
 // const pwd = document.getElementById("Pwd");
