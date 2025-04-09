@@ -27,7 +27,6 @@
 
     <title>Coffee Menu | Jerry</title>
     <style>
-
     </style>
 </head>
 
@@ -140,6 +139,20 @@
             <p>Chưa có sản phẩm</p>
             <button>Thanh toán</button>
         </div>
+        <!-- Nút giỏ hàng cho thiết bị nhỏ -->
+        <button id="cart-toggle-btn" class="cart-toggle-btn">
+            <i class="ri-shopping-cart-2-line"></i>
+        </button>
+        <!-- Sidebar dạng popup -->
+        <div class="sidebar-popup" id="sidebar-popup">
+            <h3>Giỏ hàng</h3>
+            <p>Chưa có sản phẩm nào.</p>
+            <button onclick="closeSidebar()">Đóng</button>
+        </div>
+
+        <!-- Overlay nền mờ -->
+        <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
     </div>
 
     <!-- Footer -->
@@ -148,6 +161,22 @@
             <p>&copy; 2025 Jerry Coffee. All rights reserved.</p>
         </div>
     </footer>
+    <!-- src="Script/script.js" -->
+    <script>
+        const toggleBtn = document.getElementById("cart-toggle-btn");
+        const sidebarPopup = document.getElementById("sidebar-popup");
+        const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebarPopup.classList.add("active");
+            sidebarOverlay.style.display = "block";
+        });
+
+        function closeSidebar() {
+            sidebarPopup.classList.remove("active");
+            sidebarOverlay.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

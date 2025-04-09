@@ -21,6 +21,8 @@ window.addEventListener("load", () => {
   }, 2000); // Chờ 3 giây trước khi bắt đầu mờ dần
 });
 
+
+
 // Start login Facebook Account
 // window.fbAsyncInit = function () {
 //   FB.init({

@@ -378,9 +378,8 @@ section{
 .menu-section {
     flex: 3;
 }
-.container-menu-items{
-    margin-top: 20px;
-
+.container-menu-items {
+    margin-top: 20px
 }
 
 #menu-title {
@@ -396,8 +395,8 @@ section{
     gap: 20px;
 }
 .menu-row {
-  display: flex;
-  gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 .menu-card {
@@ -416,8 +415,7 @@ section{
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(174, 136, 87, 1);
 }
-
-.menu-name, .price_item{
+.menu-name, .price_item {
     display: flex;
     color: #000;
     font-size: 16px;
@@ -432,11 +430,11 @@ section{
 }
 
 .menu-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-left: 20px;
 }
 
 .menu-price-add {
@@ -445,21 +443,20 @@ section{
     gap: 12px;
 }
 
-
 .add-btn {
-  width: 32px;
-  height: 32px;
-  background-color: #0b2c4d;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    width: 32px;
+    height: 32px;
+    background-color: #0b2c4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .add-btn:hover {
-  background-color: #0d3b6a;
+    background-color: #0d3b6a;
 }
 
 .sidebar {
@@ -470,8 +467,7 @@ section{
     padding: 20px;
     border-radius: 8px;
     height: fit-content;
-    margin-top: 60px;
-
+    margin-top: 60px
 }
 
 .sidebar h3 {
@@ -492,6 +488,59 @@ section{
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
+}
+/* Nút giỏ hàng - Ẩn trên desktop */
+.cart-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1f3557;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /* transition: background 0.3s ease; */
+}
+.cart-toggle-btn:hover {
+    background-color: #2d4b72;
+}
+/* Popup sidebar mobile */
+.sidebar-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    max-width: 320px;
+    color: #1f3557;
+    background: #fff;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+/* Khi mở popup */
+.sidebar-popup.active {
+    transform: translateX(0);
+}
+/* Overlay làm mờ nền */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 997;
+    display: none;
 }
 
 /* .sidebar ul {
@@ -641,36 +690,35 @@ button:focus {
 }
 
 /* Animating Responsive */
-@media (max-width: 1770px){
-    header{
+@media (max-width: 1770px) {
+    header {
         padding: 22px 3%;
     }
-    .icons{
+    .icons {
         padding: 0 4%;
     }
-    .scroll-down{
+    .scroll-down {
         right: 4%;
     }
     .container {
         padding: 0 3%;
     }
 }
-
-@media (max-width: 1670px){
-    :root{
+@media (max-width: 1670px) {
+    :root {
         --big-font: 5.5rem;
         --p-font: 15px;
     }
-
-    .menu-name, .price_item {
+    .menu-name,
+    .price_item {
         font-size: 15px;
     }
 }
-@media (max-width: 1370px){
-    .icons{
+@media (max-width: 1370px) {
+    .icons {
         display: none;
     }
-    section{
+    section {
         padding: 0 3%;
     }
     .menu-img img {
@@ -678,15 +726,14 @@ button:focus {
         height: 90px;
     }
 }
-
-@media (max-width: 1150px){
-    :root{
+@media (max-width: 1150px) {
+    :root {
         --big-font: 4.6rem;
     }
-    .price{
+    .price {
         font-size: 20px;
     }
-    .btn{
+    .btn {
         padding: 10px 23px;
     }
     .menu-name {
@@ -700,11 +747,11 @@ button:focus {
         font-size: 14px;
     }
 }
-@media (max-width: 950px){
-    #menu-icon{
+@media (max-width: 950px) {
+    #menu-icon {
         display: block;
     }
-    .menu-list{
+    .menu-list {
         display: flex;
         position: absolute;
         width: 100%;
@@ -718,37 +765,36 @@ button:focus {
         backdrop-filter: blur(32px);
         transition: all .6s ease-in-out;
     }
-    .menu-list a{
+    .menu-list a {
         font-size: 1.7rem;
         padding: 0;
         display: block;
         margin: 0 0 25px 0;
     }
-    .menu-list.open{
+    .menu-list.open {
         left: 0;
     }
     .sidebar {
         margin-top: 40px;
     }
 }
-
-@media (max-width: 920px){
-    .scroll-down{
-         display: none;
+@media (max-width: 920px) {
+    .scroll-down {
+        display: none;
     }
-    .hero{
+    .hero {
         grid-template-columns: 1fr;
         height: auto;
     }
-    .hero-text{
+    .hero-text {
         padding-top: 130px;
     }
-    .hero-img{
+    .hero-img {
         height: 500px;
         width: 500px;
         margin: 0 auto;
     }
-    .hero-img img{
+    .hero-img img {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -767,7 +813,7 @@ button:focus {
 }
 
 @media (max-width: 768px) {
-    .menu-items{
+    .menu-items {
         display: grid;
     }
     .menu-row {
@@ -793,7 +839,7 @@ button:focus {
     .price_item {
         font-size: 14px;
     }
-
+    
     .menu-content {
         flex-direction: column;
         align-items: flex-start;
@@ -808,20 +854,15 @@ button:focus {
     }
 
     .sidebar {
-        width: 100%;
-        margin-top: 30px;
-        border-left: none;
-        border-top: 1px solid #ccc;
-        text-align: center;
-        padding-top: 20px;
+        display: none;
     }
 
-    /* .container-menu-items {
-        padding: 0;
-    } */
+    .cart-toggle-btn {
+        display: block;
+    }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
     .menu-card {
         flex-direction: column;
         align-items: flex-start;
@@ -838,21 +879,31 @@ button:focus {
         justify-content: space-between;
         width: 100%;
     }
+
+    .sidebar {
+        display: none;
+    }
+
+    .cart-toggle-btn {
+        display: block;
+    }
 }
 
-
-@media (max-width: 570px){
-    .hero{
+@media (max-width: 570px) {
+    .hero {
         height: 100%;
     }
-    .hero-img{
+
+    .hero-img {
         width: 400px;
         height: 400px;
         margin: 0 auto;
     }
-    :root{
+
+    :root {
         --big-font: 4rem;
     }
+
     .menu-img img {
         width: 65px;
         height: 65px;
@@ -863,20 +914,30 @@ button:focus {
         height: 28px;
         font-size: 16px;
     }
+    .sidebar {
+        display: none;
+    }
+
+    .cart-toggle-btn {
+        display: block;
+    }
 }
 
-@media (max-width: 440px){
+@media (max-width: 440px) {
     :root {
         --big-font: 3.4rem;
     }
-    .hero h5{
+
+    .hero h5 {
         font-size: 15px;
     }
-    .hero-img{
+
+    .hero-img {
         width: 360px;
         height: 360px;
         margin: 0 auto;
     }
+
     .menu-img img {
         width: 60px;
         height: 60px;
@@ -896,12 +957,20 @@ button:focus {
         font-size: 14px;
     }
 
+    .sidebar {
+        display: none;
+    }
+
+    .cart-toggle-btn {
+        display: block;
+    }
+
     footer p {
         font-size: 12px;
     }
 }
 
-@media (max-width: 390px){
+@media (max-width: 390px) {
     :root {
         --big-font: 3rem;
     }
@@ -912,35 +981,40 @@ button:focus {
     }
 
     .menu-name {
-        font-size: 14px;
+       font-size: 14px;
     }
 
-    .price_item {
-        font-size: 13px;
+   .price_item {
+       font-size: 13px;
+   }
+   .add-btn {
+       width: 28px;
+       height: 28px;
+       font-size: 16px;
+   }
+   .hero-img {
+       width: 300px;
+       height: 300px;
+   }
+   .menu-card {
+       padding: 8px 12px;
+   }
+
+   .sidebar {
+        display: none;
     }
 
-    .add-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 16px;
-    }
-
-    .hero-img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .menu-card {
-        padding: 8px 12px;
+    .cart-toggle-btn {
+        display: block;
     }
 }
 
 
-@media (max-width: 330px){
+@media (max-width: 330px) {
     .menu-name {
         font-size: 13px;
     }
-
+    
     .price_item {
         font-size: 12px;
     }
@@ -961,6 +1035,14 @@ button:focus {
     .hero-img {
         width: 260px;
         height: 260px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .cart-toggle-btn {
+        display: block;
     }
 }
 /* End Responsive */
