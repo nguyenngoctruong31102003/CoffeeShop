@@ -30,27 +30,6 @@ footer {
     /* margin-top: 20px; */
 }
 
-.container {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-    /* margin-top: 10px; */
-}
-.back-home{
-    display: flex; 
-    padding: 10px; 
-    gap: 20px; 
-    max-width: 1200px; 
-    margin: auto; 
-    margin-top: 10px;
-}
-.back-home a{
-    text-decoration: none; 
-    font-size: 16px; 
-    color: white;
-}
 
 /* Loading Element */
 .loader {
@@ -187,18 +166,18 @@ header{
 .logo img{
     width: 5em;
     height: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* animation: animate 4s infinite linear; */
 }
 
-@keyframes animate{
+/* @keyframes animate{
     0%{
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
     }
-}
+} */
 
 .menu-list{
     display: flex;
@@ -374,7 +353,29 @@ section{
     color: var(--text-color);
 }
 
-/* Thực đơn */
+/* Thực đơn - Menu Coffee*/
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    /* margin-top: 10px; */
+}
+.back-home{
+    display: flex; 
+    padding: 10px; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: auto; 
+    margin-top: 10px;
+}
+.back-home a{
+    text-decoration: none; 
+    font-size: 16px; 
+    color: white;
+}
+
 .menu-section {
     flex: 3;
 }
@@ -688,8 +689,9 @@ button:focus {
     box-shadow: 0px 0px 0px 2px currentColor;
     transform: scale(0.9);
 }
+/* End Form Login and Register Page */
 
-/* Animating Responsive */
+/* Responsive */
 @media (max-width: 1770px) {
     header {
         padding: 22px 3%;

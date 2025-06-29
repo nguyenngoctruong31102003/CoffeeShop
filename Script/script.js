@@ -1,9 +1,9 @@
 let menu = document.querySelector("#menu-icon");
-let menuist = document.querySelector(".menu-list");
+let menuList = document.querySelector(".menu-list");
 
 menu.onclick = () => {
   menu.classList.toggle("bx-x");
-  menuist.classList.toggle("open");
+  menuList.classList.toggle("open");
 };
 
 // preloader
